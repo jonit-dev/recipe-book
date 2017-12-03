@@ -1,5 +1,7 @@
-<ul style="list-style-type: none;">
-  <a href="javascript:void(0)">
-    <li><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping list Item 1</li>
+<app-shopping-edit (ingredientData)="onIngredientData($event)"></app-shopping-edit>
+<hr>
+<ul class="list-group" style="list-style-type: none">
+  <a href="#" class="list-group-item" style="cursor:pointer" *ngFor="let ingredient of ingredients">
+    <li><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{ingredient.name}} ({{ingredient.amount}})</li>
   </a>
 </ul>

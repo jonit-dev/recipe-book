@@ -1,23 +1,30 @@
-<app-header></app-header>
+<app-header (featureSelected)="onFeatureSelected($event)"></app-header>
 
 <div class="container">
 
   <div class="jumbotron">
 
-    <div class="row">
+
+    <p>Directive test</p>
+
+
+    <div class="row" *ngIf="loadedFeature === 'recipe'">
       <div class="col-md-12">
-        <div class="col-md-6">
-          <h2>My Shopping List</h2>
-          <app-shopping-list></app-shopping-list>
-
-        </div>
-        <div class="col-md-6">
-
-                <app-recipe-list></app-recipe-list>
 
 
-        </div>
 
+                <app-recipes></app-recipes>
+
+
+
+
+
+      </div>
+    </div>
+    <div class="row" *ngIf="loadedFeature === 'shopping'">
+      <div class="col-md-12">
+        <h3>My Shopping List</h3>
+        <app-shopping-list></app-shopping-list>
 
       </div>
     </div>

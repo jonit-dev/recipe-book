@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img src="" alt="" class="img-responsive">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <h3>{{recipeDetail.name}}</h3>
+
+  </div>
+
+  <div class="col-xs-6">
+    <div class="btn-group" appDropdown>
+      <button type="button" class="btn btn-primary dropdown-toggle">Manage Recipe <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">To Shopping List</a></li>
+        <li><a href="#">Edit Recipe</a></li>
+        <li><a href="#">Delete Recipe</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="container">
+      <div [ngSwitch]="recipeDetail.name">
+        <h5 *ngSwitchCase="'A test recipe'">Hmm... delicious</h5>
+        <h5 *ngSwitchCase="'Second Recipe'">It seems like pizza, eh?</h5>
+      </div>
+      {{recipeDetail.description}}
+    </div>
+  </div>
+</div>
+<div class="row">
+  <hr>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="container">
+      <img [src]="recipeDetail.imagePath" alt="" width="50%" height="30%"
+           class="center-block img-rounded img-responsive">
+    </div>
+  </div>
+</div>
+

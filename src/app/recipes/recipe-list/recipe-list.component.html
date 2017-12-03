@@ -1,0 +1,58 @@
+<h3 id="nav-tabs">My Recipes</h3>
+
+
+<div class="row">
+  <div class="col-xs-12">
+
+    <button class="btn btn-sm btn-primary">Create new Recipe</button>
+
+  </div>
+</div>
+<br>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="bs-component">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#home" data-toggle="tab">Main Recipes</a></li>
+        <li><a href="#profile" data-toggle="tab">Other</a></li>
+        <!--<li class="disabled"><a>Disabled</a></li>-->
+        <!--<li class="dropdown">-->
+        <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#">-->
+        <!--Dropdown <span class="caret"></span>-->
+        <!--</a>-->
+        <!--<ul class="dropdown-menu">-->
+        <!--<li><a href="#dropdown1" data-toggle="tab">Action</a></li>-->
+        <!--<li class="divider"></li>-->
+        <!--<li><a href="#dropdown2" data-toggle="tab">Another action</a></li>-->
+        <!--</ul>-->
+        <!--</li>-->
+      </ul>
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="home">
+
+
+          <app-recipe-item
+            *ngFor="let recipe of recipes"
+            [recipe] = "recipe"></app-recipe-item>
+
+
+          <!--<ul style="list-style-type: none; padding:1rem;">-->
+          <!--&lt;!&ndash;<a href="javascript:void(0)">&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><i class="fa fa-file-text-o" aria-hidden="true"></i>&ndash;&gt;-->
+          <!--&lt;!&ndash;<app-recipe-item></app-recipe-item>&ndash;&gt;-->
+          <!--&lt;!&ndash;</li>&ndash;&gt;-->
+          <!--&lt;!&ndash;</a>&ndash;&gt;-->
+          <!--</ul>-->
+
+        </div>
+        <div class="tab-pane fade" id="profile">
+          <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1
+            labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer
+            twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+            cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>

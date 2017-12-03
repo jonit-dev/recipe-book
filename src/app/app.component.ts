@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  loadedFeature: string;
 
+  constructor() {
+    this.loadedFeature = 'recipe';
+  }
+
+  onFeatureSelected(feature: string) {
+    this.loadedFeature = feature;
+  }
+
+  ngOnInit() {
+  }
 
 
 }
